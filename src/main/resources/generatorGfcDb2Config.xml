@@ -20,54 +20,42 @@
 		</javaTypeResolver>
 		<!--指定生成model的路徑 -->
 		<javaModelGenerator
-			targetPackage="com.gfc.cntapi01.entity.db2"
-			targetProject="cnt-api-01/src/main/java">
+			targetPackage="com.vt.demo16.entity.db2"
+			targetProject="demo-16/src/main/java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<!--Build mapping file storage location -->
-		<sqlMapGenerator targetPackage="com.gfc.cntapi01.dao.db2"
-			targetProject="cnt-api-01/src/main/java">
+		<sqlMapGenerator targetPackage="com.vt.demo16.dao.db2"
+			targetProject="demo16-01/src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!--指定生成mapper介面的的路徑 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.gfc.cntapi01.dao.db2"
-			targetProject="cnt-api-01/src/main/java">
+			targetPackage="com.vt.demo16.dao.db2"
+			targetProject="demo-16/src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<!-- 排除不生成column的幾種方式 -->
-		<!-- table tableName="systables" mapperName="SystablesMapperDb4">
+		<!-- 
+		<table tableName="systables" mapperName="SystablesMapperDb4">
 			<ignoreColumnsByRegex pattern="pagesize|ustlowts|secpolicyid|protgranularity|statchange|statlevel">
 				<except column="tabname" />
 				<except column="tabid" />
 				<except column="tabtype" />
 			</ignoreColumnsByRegex>
-		</table -->
+		</table>
+		-->
 		<!-- 因為column命名與java保留字相同,產生ORM需更名 -->
-		<!-- table tableName="syscolumnext" mapperName="SyscolumnextMapperDb4">
+		<!-- 
+		<table tableName="syscolumnext" mapperName="SyscolumnextMapperDb4">
 			<columnRenamingRule searchString="^class$" replaceString="r_class" />
 		</table>
 		<table tableName="prgm240">
 			<columnRenamingRule searchString="^public$" replaceString="r_public" />
-		</table -->
-		<table tableName="cntm521">
 		</table>
-		<table tableName="cntm005">
-		</table>
-		<table tableName="cntm007">
-		</table>
-		<table tableName="cntm007a">
-		</table>
-		<table tableName="cntm007b">
-		</table>
-		<table tableName="cntm009">
-		</table>
-		<table tableName="cntm185">
-			<columnRenamingRule searchString="^class$" replaceString="r_class" />
-		</table>
-		<table tableName="cntm186">
-		</table>
+		-->
+		<!-- 
 		<table tableName="psnm120">
 			<ignoreColumnsByRegex pattern="[a-z].*">
 				<except column="emp_no" />
@@ -81,5 +69,6 @@
 				<except column="gntr" />
 			</ignoreColumnsByRegex>
 		</table>
+		-->
 	</context>
 </generatorConfiguration>
