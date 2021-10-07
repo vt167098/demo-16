@@ -3,8 +3,8 @@
 ## 重要套件
 
 - mybatis
--- dynamicsql
--- generate
+  - dynamicsql
+  - generate
 - druid
 - informix jdbc
 
