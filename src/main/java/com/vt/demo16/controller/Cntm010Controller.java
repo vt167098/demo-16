@@ -27,16 +27,16 @@ import com.vt.demo16.service.UpdateCntm010Service;
 public class Cntm010Controller {
 
 	@Autowired
-	Cntm010Mapper cntm010Mapper;
+	private Cntm010Mapper cntm010Mapper;
 
 	@Autowired
-	Cntm015Mapper cntm015Mapper;
+	private Cntm015Mapper cntm015Mapper;
 
 	@Autowired
-	Join01Mapper join01Mapper;
+	private Join01Mapper join01Mapper;
 
 	@Autowired
-	UpdateCntm010Service updateCntm010Service;
+	private UpdateCntm010Service updateCntm010Service;
 
 	@GetMapping("/sale/{saleNo}")
 	public List<Join01> SaleRead(@PathVariable Integer saleNo) {
