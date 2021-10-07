@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<properties resource="generator.properties" />
+	<context id="db1" targetRuntime="MyBatis3DynamicSql">
+		<!--可以自定義生成model的程式碼註釋 -->
+		<commentGenerator>
+			<!-- 是否去除自動生成的註釋 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="true" />
+			<property name="suppressDate" value="true" />
+			<property name="addRemarkComments" value="true" />
+		</commentGenerator>
+		<!--配置資料庫連線 -->
+		<jdbcConnection driverClass="${jdbc.driverClass}"
+			connectionURL="${jdbc.db1.connectionURL}" userId="${jdbc.userId}"
+			password="${jdbc.password}">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!--指定生成model的路徑 -->
+		<javaModelGenerator
+			targetPackage="com.gfc.cntapi01.entity.db1"
+			targetProject="cnt-api-01/src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!--Build mapping file storage location -->
+		<sqlMapGenerator targetPackage="com.gfc.cntapi01.dao.db1"
+			targetProject="cnt-api-01/src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!--指定生成mapper介面的的路徑 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.gfc.cntapi01.dao.db1"
+			targetProject="cnt-api-01/src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<!-- 排除不生成column的幾種方式 -->
+		<!-- table tableName="prgm000">
+			<ignoreColumn column="create_id" />
+			<ignoreColumn column="create_date" />
+			<ignoreColumn column="update_id" />
+			<ignoreColumn column="update_date" />
+		</table -->
+		<!-- table tableName="systables" mapperName="SystablesMapperDb1">
+			<ignoreColumnsByRegex pattern="(?i)col.*">
+				<except column="col01" />
+				<except column="col13" />
+			</ignoreColumnsByRegex>
+		</table -->
+		<!-- 因為column命名與java保留字相同,產生ORM需更名 -->
+		<!-- table tableName="syscolumnext" mapperName="SyscolumnextMapperDb1">
+			<columnRenamingRule searchString="^class$" replaceString="r_class" />
+		</table -->
+		<!-- 多資料庫同table, 用於區分來源資料庫 -->
+		<!-- table tableName="systableext" mapperName="SystableextMapperDb1">
+		</table>
+		<table tableName="cntm010">
+		</table>
+		<table tableName="cntm015">
+		</table>
+		<table tableName="cntm020">
+		</table>
+		<table tableName="cntm110">
+		</table -->
+		<!-- 
+		<table tableName="cntm060">
+		</table>
+		<table tableName="cntm040">
+		</table>
+		<table tableName="cntm120">
+		</table>
+		<table tableName="cntm130">
+		</table>
+		<table tableName="cntm135">
+		</table>
+		<table tableName="cntm140">
+		</table>
+		<table tableName="cntm150">
+		</table>
+		<table tableName="cntm155">
+		</table>
+		<table tableName="cntm190">
+		</table>
+		<table tableName="cntm191">
+		</table>
+		<table tableName="cntm192">
+		</table>
+		<table tableName="cntm195">
+		</table>
+		<table tableName="cntm210">
+		</table>
+		<table tableName="molm200">
+		</table>
+		<table tableName="molm210">
+		</table>
+		<table tableName="molm170">
+		</table>
+		<table tableName="cntm300">
+		</table>
+		<table tableName="cntm380">
+			<columnRenamingRule searchString="^class$" replaceString="r_class" />
+		</table>
+		-->
+		<table tableName="cntm381">
+			<columnRenamingRule searchString="^class$" replaceString="r_class" />
+		</table>
+	</context>
+</generatorConfiguration>
